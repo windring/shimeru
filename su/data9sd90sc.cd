@@ -1,0 +1,2 @@
+hello world| |20160714| |one| |null| |hello-world
+hello world with lock| |20160714| |log| |who's my lover?| |{"iv":"ZpXLw8MgTopBX2n7t0qcYQ","v":1,"iter":1000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"dh5SlLrLk5o","ct":"Rhltrc6zUWFrwwPCDHC3"}
