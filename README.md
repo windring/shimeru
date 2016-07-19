@@ -1,2 +1,0 @@
-# shimeru
-Light blog program
