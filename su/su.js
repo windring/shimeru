@@ -1,5 +1,5 @@
 var cd="";//记录
-var myshort="assorted";//在多说设置的短域名
+var myshort="shimeru";//在多说设置的短域名
 var cdpath="su/";//目录src
 var mdpath="md/";//files src sub
 var mycharset="UTF-8";//使用的字符集
