@@ -1,6 +1,6 @@
 # shimeru
 Light blog  
-这是一个利用ajax进行静态加载的轻博客.
+这是一个利用ajax进行静态加载的轻博客.示例页面[(=>)](https://windring.github.io/shimeru/ "")
 
 安装:上传[shimeru](https://github.com/windring/shimeru "")到服务器  
 ```
