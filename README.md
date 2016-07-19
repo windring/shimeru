@@ -42,6 +42,7 @@ Light blog
 额外使用的技术:  
 * jqurey
 * 斯坦福加密库
+* markdownJS
 
 License:  
   the Apache 2.0
