@@ -28,10 +28,10 @@ Light blog
 
 使用文章路径加密:  
 * 关闭服务器的目录索引.
-* 创建文章,随机命名**filename**.cd,前往斯坦福加密库实例页面[(=>)](http://bitwiseshiftleft.github.io/sjcl/demo/ "")或shimeru运行页面,进入F12控制台,运行
+* 创建文章,随机命名**filename**.md,前往斯坦福加密库实例页面[(=>)](http://bitwiseshiftleft.github.io/sjcl/demo/ "")或shimeru运行页面,进入F12控制台,运行
   `sjcl.encrypt("yourKey",filename)`,获取加密字串.  
   注：**"yourKey"**为下一步加密问题的答案.
-* 编辑`su/*cd`,创建新行,格式:  
+* 编辑`su/*.cd`,创建新行,格式:  
   ```
   文章标题| |日期信息| |分类| |提问问题| |加密字串(不包含{}外的"")
   ```
