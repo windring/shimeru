@@ -17,7 +17,6 @@ $(document).ready(function(){
     cd=r;
     lo_li();
   });
-  location.hash="#!/";
   hashChange();
 });
 function lo_li()
@@ -111,6 +110,8 @@ function hashChange()
 	  var nhows=decodeURIComponent(location.hash).split("#!/")[1];
 	  (nhows=="")?location.hash="#!/"+"home":null;
 	  (nhows=="home"||nhows=="")?null:futa(nhows);
+	}else{
+	  location.hash="#!/home"
 	}
 }
 window.onhashchange=hashChange();
