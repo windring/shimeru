@@ -16,10 +16,13 @@ html,body{
 	display:block;
 	line-height:70px;
 	font-size:70px;
-	padding-left:35px;
+	margin:0 35px;
 	border-bottom:#efefef 5px solid;
 	text-decoration:none;
 	color:#efefef;
+	text-align:center;
+	position:absolute;
+	z-index:1;
 }#lg #t{
 	position:absolute;
 	margin:0 auto;
