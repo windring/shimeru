@@ -100,8 +100,8 @@ function hashChange()
 	if(decodeURIComponent(location.hash).indexOf("#!/")>0)
 	{
 	  var nowhs=decodeURIComponent(location.hash).split("#!/")[1];
-	  (nhows=="")?location.hash="#!/"+"home":;
-	  (nhows=="home")?:futa(nhows);
+	  (nhows=="")?location.hash="#!/"+"home":null;
+	  (nhows=="home")?null:futa(nhows);
 	}
 }
 window.onhashchange=hashChange();
