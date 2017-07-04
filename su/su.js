@@ -42,7 +42,7 @@ function futa(l){
 	var k;
 	for(var jsk in lis)
 	{
-		if(jsk.indexOf(l)>-1)
+		if(lis[jsk].indexOf(l)>-1)
 			k=jsk;
 	}
 	l=lis[k];
