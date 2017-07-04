@@ -34,6 +34,7 @@ function lo_li()
 		lisl.attr("class","loli");
 		$(lisl).click(function(){
 				location.hash="#!/"+lis[$(this).attr("loli")][0];
+				hashChange();
 		});
 		$("#ls").append(lisl);
 	}
@@ -67,7 +68,7 @@ function sasa(k,j){
 		if(s=="success")
 		{
 			$("#coc").html(markdown.toHTML(r));
-			hashChange(j);
+			location.hash="#!/"+j;
 			getComment(k,j);
 			$("#ls").css("display","none");
 			$("#coc").css("display","block");
