@@ -17,6 +17,7 @@ $(document).ready(function(){
     cd=r;
     lo_li();
   });
+  location.hash="#!/";
   hashChange();
 });
 function lo_li()
@@ -32,13 +33,13 @@ function lo_li()
 		lisl.attr("loli",loli);
 		lisl.attr("class","loli");
 		$(lisl).click(function(){
-				location.hash="#!/"+$(this).attr("loli");
+				location.hash="#!/"+lis[$(this).attr("loli")];
 		});
 		$("#ls").append(lisl);
 	}
 }
-function futa(k){
-	var l=lis[k];
+function futa(l){
+	var k=lis.indexOf(l);
 	if(l[3]!="null")
 	{
 		var key=prompt(l[3],"****");
@@ -98,11 +99,11 @@ function getComment(k,j){
 }
 function hashChange()
 {
-	if(decodeURIComponent(location.hash).indexOf("#!/")>0)
+	if(decodeURIComponent(location.hash).indexOf("#!/")>=0)
 	{
-	  var nowhs=decodeURIComponent(location.hash).split("#!/")[1];
+	  var nhows=decodeURIComponent(location.hash).split("#!/")[1];
 	  (nhows=="")?location.hash="#!/"+"home":null;
-	  (nhows=="home")?null:futa(nhows);
+	  (nhows=="home"||nhows=="")?null:futa(nhows);
 	}
 }
 window.onhashchange=hashChange();
