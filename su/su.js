@@ -33,13 +33,19 @@ function lo_li()
 		lisl.attr("loli",loli);
 		lisl.attr("class","loli");
 		$(lisl).click(function(){
-				location.hash="#!/"+lis[$(this).attr("loli")];
+				location.hash="#!/"+lis[$(this).attr("loli")][0];
 		});
 		$("#ls").append(lisl);
 	}
 }
 function futa(l){
-	var k=lis.indexOf(l);
+	var k;
+	for(var jsk in lis)
+	{
+		if(jsk.indexOf(l)>-1)
+			k=jsk;
+	}
+	l=lis[k];
 	if(l[3]!="null")
 	{
 		var key=prompt(l[3],"****");
