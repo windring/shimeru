@@ -31,13 +31,12 @@ function lo_li()
 		lisl.attr("loli",loli);
 		lisl.attr("class","loli");
 		$(lisl).click(function(){
-			futa(this);
+				location.hash="#!/"+$(j).attr("loli");
 		});
 		$("#ls").append(lisl);
 	}
 }
-function futa(j){
-	k=$(j).attr("loli");
+function futa(k){
 	var l=lis[k];
 	if(l[3]!="null")
 	{
@@ -96,7 +95,13 @@ function getComment(k,j){
 		DUOSHUO.EmbedThread('.ds-thread');
 	}
 }
-function hashChange(j)
+function hashChange()
 {
-	location.hash="#!/"+j;
+	if(decodeURIComponent(location.hash).indexOf("#!/")>0)
+	{
+	  var nowhs=decodeURIComponent(location.hash).split("#!/")[1];
+	  (nhows=="")?local.hash="#!/"+"home":;
+	  (nhows=="home")?:futa(nhows);
+	}
 }
+window.onhashchange=hashChange();
