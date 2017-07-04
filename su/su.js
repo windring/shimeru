@@ -17,6 +17,7 @@ $(document).ready(function(){
     cd=r;
     lo_li();
   });
+  hashChange();
 });
 function lo_li()
 {
@@ -31,7 +32,7 @@ function lo_li()
 		lisl.attr("loli",loli);
 		lisl.attr("class","loli");
 		$(lisl).click(function(){
-				location.hash="#!/"+$(j).attr("loli");
+				location.hash="#!/"+$(this).attr("loli");
 		});
 		$("#ls").append(lisl);
 	}
