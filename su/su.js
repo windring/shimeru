@@ -17,6 +17,7 @@ $(document).ready(function(){
     cd=r;
     lo_li();
   });
+  hashChange();
 });
 function lo_li()
 {
@@ -31,13 +32,20 @@ function lo_li()
 		lisl.attr("loli",loli);
 		lisl.attr("class","loli");
 		$(lisl).click(function(){
-				location.hash="#!/"+$(j).attr("loli");
+				location.hash="#!/"+lis[$(this).attr("loli")][0];
+				hashChange();
 		});
 		$("#ls").append(lisl);
 	}
 }
-function futa(k){
-	var l=lis[k];
+function futa(l){
+	var k;
+	for(var jsk in lis)
+	{
+		if(lis[jsk].indexOf(l)>-1)
+			k=jsk;
+	}
+	l=lis[k];
 	if(l[3]!="null")
 	{
 		var key=prompt(l[3],"****");
@@ -59,7 +67,7 @@ function sasa(k,j){
 		if(s=="success")
 		{
 			$("#coc").html(markdown.toHTML(r));
-			hashChange(j);
+			location.hash="#!/"+j;
 			getComment(k,j);
 			$("#ls").css("display","none");
 			$("#coc").css("display","block");
@@ -97,11 +105,13 @@ function getComment(k,j){
 }
 function hashChange()
 {
-	if(decodeURIComponent(location.hash).indexOf("#!/")>0)
+	if(decodeURIComponent(location.hash).indexOf("#!/")>=0)
 	{
-	  var nowhs=decodeURIComponent(location.hash).split("#!/")[1];
-	  (nhows=="")?local.hash="#!/"+"home":;
-	  (nhows=="home")?:futa(nhows);
+	  var nhows=decodeURIComponent(location.hash).split("#!/")[1];
+	  (nhows=="")?location.hash="#!/"+"home":null;
+	  (nhows=="home"||nhows=="")?null:futa(nhows);
+	}else{
+	  location.hash="#!/home"
 	}
 }
 window.onhashchange=hashChange();
